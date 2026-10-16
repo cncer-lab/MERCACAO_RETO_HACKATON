@@ -28,7 +28,6 @@ function Login() {
       return;
     }
 
-    // Redirección según el rol
     if (result.user.role === "OPERADOR") {
       window.location.href = "/operador";
       return;

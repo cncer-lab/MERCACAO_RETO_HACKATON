@@ -1,32 +1,9 @@
+"use client";
+
 import "./App.css";
-import imagenCosecha from "./assets/cosecha.jpeg";
-import Register from "./pages/register";
-import ForgotPassword from "./pages/forgotPassword";
-import Login from "./pages/auth/login";
-import OperatorDashboard from "./pages/operator/operatorDashboard";
-import AdminDashboard from "./pages/admin/adminDashboard";
+import cosecha from "./assets/cosecha.jpeg";
 
 function App() {
-  const path = window.location.pathname;
-
-  if (path === "/login") {
-    return <Login />;
-  }
-
-  if (path === "/register") {
-    return <Register />;
-  }
-
-  if (path === "/forgot-password") {
-    return <ForgotPassword />;
-  }
-  if (path === "/operador") {
-  return <OperatorDashboard />;
-}
-
-if (path === "/admin") {
-  return <AdminDashboard />;
-}
   return (
     <div className="app">
       <header className="navbar">
@@ -87,7 +64,7 @@ if (path === "/admin") {
 
           </div>
           <div className="hero-imagen">
-            <img src={imagenCosecha} alt="imagen generada por ia" className="visual" />
+            <img src={cosecha} alt="Cosecha" className="visual" />
           </div>
 
         </section>
