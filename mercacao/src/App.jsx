@@ -1,9 +1,10 @@
 import "./App.css";
 import imagenCosecha from "./assets/cosecha.jpeg";
-import Login from "./pages/login";
 import Register from "./pages/register";
 import ForgotPassword from "./pages/forgotPassword";
-
+import Login from "./pages/auth/login";
+import OperatorDashboard from "./pages/operator/operatorDashboard";
+import AdminDashboard from "./pages/admin/adminDashboard";
 
 function App() {
   const path = window.location.pathname;
@@ -19,6 +20,13 @@ function App() {
   if (path === "/forgot-password") {
     return <ForgotPassword />;
   }
+  if (path === "/operador") {
+  return <OperatorDashboard />;
+}
+
+if (path === "/admin") {
+  return <AdminDashboard />;
+}
   return (
     <div className="app">
       <header className="navbar">
