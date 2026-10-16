@@ -1,8 +1,24 @@
-
 import "./App.css";
 import imagenCosecha from "./assets/cosecha.jpeg";
+import Login from "./pages/login";
+import Register from "./pages/register";
+import ForgotPassword from "./pages/forgotPassword";
+
 
 function App() {
+  const path = window.location.pathname;
+
+  if (path === "/login") {
+    return <Login />;
+  }
+
+  if (path === "/register") {
+    return <Register />;
+  }
+
+  if (path === "/forgot-password") {
+    return <ForgotPassword />;
+  }
   return (
     <div className="app">
       <header className="navbar">
@@ -25,7 +41,7 @@ function App() {
           </nav>
 
           <a href="/login" className="nav-button"> Ingresar</a>
-          <a href="/login" className="nav-button"> Registrarse</a>
+          <a href="/register" className="nav-button"> Registrarse</a>
 
         </div>
       </header>
