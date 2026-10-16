@@ -34,3 +34,10 @@ export const esquemaFiltrosLote = z.object({
     })
     .optional(),
 });
+
+export const esquemaFiltrosAuditoria = z.object({
+  tabla: z.enum(['lotes', 'etapas', 'productos']).optional(),
+  registro_id: z.string().trim().max(60).optional(),
+  limite: z.coerce.number().int().min(1).max(200).default(50),
+  pagina: z.coerce.number().int().min(1).default(1),
+});

@@ -17,8 +17,8 @@ export function calcularMerma(entrada, salida, justificacion = '') {
     merma,
     alerta,
     explicacion: alerta
-      ? `La merma es ${merma}%, mayor que el límite de ${UMBRAL_MERMA}%.`
-      : `La merma es ${merma}%, dentro del límite de ${UMBRAL_MERMA}%.`,
+      ? `La merma es ${Number(merma.toFixed(2))}%, mayor que el límite de ${UMBRAL_MERMA}%.`
+      : `La merma es ${Number(merma.toFixed(2))}%, dentro del límite de ${UMBRAL_MERMA}%.`,
   }
 }
 
