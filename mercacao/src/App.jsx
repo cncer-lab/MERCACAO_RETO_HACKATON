@@ -41,12 +41,13 @@ if (path === "/admin") {
             </div>
           </div>
 
-          <nav className="nav-links">
+          {/*<nav className="nav-links">
             <a href="#inicio">Inicio</a>
             <a href="#nosotros">Nosotros</a>
             <a href="#trazabilidad">Trazabilidad</a>
             <a href="#beneficios">Beneficios</a>
-          </nav>
+          </nav>*/}
+          <nav className="nav-links"></nav>
 
           <a href="/login" className="nav-button"> Ingresar</a>
           <a href="/register" className="nav-button"> Registrarse</a>
@@ -88,67 +89,6 @@ if (path === "/admin") {
           <div className="hero-imagen">
             <img src={imagenCosecha} alt="imagen generada por ia" className="visual" />
           </div>
-          {/*<div className="hero-visual">
-
-            <div className="hero-card">
-
-              <div className="cacao-icon">
-                🍫
-              </div>
-
-              <div>
-                <span className="card-label">
-                  LOTE TRAZABLE
-                </span>
-
-                <h3>CAC001</h3>
-
-                <p>
-                  📍 Rivera, Huila
-                </p>
-              </div>
-
-              <div className="status-badge">
-                ✓ Liberado
-              </div>
-
-            </div>
-
-
-            <div className="trace-line">
-
-              <div className="trace-item">
-                <div className="trace-number">01</div>
-
-                <div>
-                  <strong>Origen</strong>
-                  <span>Productor · Rivera</span>
-                </div>
-              </div>
-
-
-              <div className="trace-item">
-                <div className="trace-number">02</div>
-
-                <div>
-                  <strong>Transformación</strong>
-                  <span>Procesamiento del cacao</span>
-                </div>
-              </div>
-
-
-              <div className="trace-item">
-                <div className="trace-number">03</div>
-
-                <div>
-                  <strong>Producto</strong>
-                  <span>Listo para comercialización</span>
-                </div>
-              </div>
-
-            </div>
-
-          </div> */}
 
         </section>
 
@@ -358,13 +298,6 @@ if (path === "/admin") {
 
 
           <div className="footer-column">
-
-            <h4>Proyecto</h4>
-
-            <a href="#inicio">Inicio</a>
-            <a href="#nosotros">Nosotros</a>
-            <a href="#trazabilidad">Trazabilidad</a>
-            <a href="#beneficios">Beneficios</a>
 
           </div>
 
