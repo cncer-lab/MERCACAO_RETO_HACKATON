@@ -23,7 +23,7 @@ export async function POST(request) {
   const datos = resultado.data;
   const { data, error: errorBd } = await supabaseAdmin
     .from('lotes')
-    .insert({ ...datos, disponible: datos.cantidad })
+    .insert({ id: datos.id, productor: datos.productor, origen: datos.origen, fecha: datos.fecha, unidad: datos.unidad, cantidad_recibida: datos.cantidad, disponible: datos.cantidad })
     .select()
     .single();
 

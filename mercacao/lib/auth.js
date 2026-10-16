@@ -11,7 +11,7 @@ export async function exigirPermiso(accion) {
   const { data: perfil } = await supabaseAdmin
     .from('perfiles')
     .select('rol')
-    .eq('id', userId)
+    .eq('usuario_id', userId)
     .single()
 
   if (!perfil || !puedeRealizar(perfil.rol, accion)) {
