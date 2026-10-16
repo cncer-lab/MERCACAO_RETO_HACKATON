@@ -1,19 +1,48 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import "./operatorDashboard.css";
 
 function OperatorDashboard() {
   const [activeSection, setActiveSection] = useState("resumen");
 
-  const [lots, setLots] = useState(() => {
-    const saved = localStorage.getItem("mercacao_lots");
-    return saved ? JSON.parse(saved) : [];
-  });
+  const [lots, setLots] = useState([]);
+  const [transformations, setTransformations] = useState([]);
 
-  const [transformations, setTransformations] = useState(() => {
-    const saved = localStorage.getItem("mercacao_transformations");
-    return saved ? JSON.parse(saved) : [];
-  });
+  useEffect(() => {
+    const savedLots = localStorage.getItem("mercacao_lots");
+    const savedTransformations = localStorage.getItem(
+      "mercacao_transformations"
+    );
 
+    if (savedLots) {
+      try {
+        setLots(JSON.parse(savedLots));
+      } catch {
+        setLots([]);
+      }
+    }
+
+    if (savedTransformations) {
+      try {
+        setTransformations(JSON.parse(savedTransformations));
+      } catch {
+        setTransformations([]);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("mercacao_lots", JSON.stringify(lots));
+  }, [lots]);
+
+  useEffect(() => {
+    localStorage.setItem(
+      "mercacao_transformations",
+      JSON.stringify(transformations)
+    );
+  }, [transformations]);
+  
   const [lotForm, setLotForm] = useState({
     producer: "",
     origin: "",
