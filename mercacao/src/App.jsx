@@ -1,5 +1,6 @@
 
 import "./App.css";
+import imagenCosecha from "./assets/cosecha.jpeg";
 
 function App() {
   return (
@@ -11,8 +12,8 @@ function App() {
             {/*<div className="brand-icon">🍫</div>*/}
 
             <div>
-              <h2>CacaoTrace</h2>
-              <span>Huila</span>
+              <h2>Mercacao</h2>
+              <span>Colombia</span>
             </div>
           </div>
 
@@ -44,7 +45,7 @@ function App() {
             </h1>
 
             <p>
-              CacaoTrace Huila permite conocer el recorrido del cacao
+              Mercacao Colombia permite conocer el recorrido del cacao
               desde su origen hasta su transformación, fortaleciendo
               la transparencia y el control de cada lote.
             </p>
@@ -60,9 +61,10 @@ function App() {
             </div>
 
           </div>
-
-
-          <div className="hero-visual">
+          <div className="hero-imagen">
+            <img src={imagenCosecha} alt="imagen generada por ia" className="visual" />
+          </div>
+          {/*<div className="hero-visual">
 
             <div className="hero-card">
 
@@ -122,12 +124,9 @@ function App() {
 
             </div>
 
-          </div>
+          </div> */}
 
         </section>
-
-
-        {}
 
         <section id="nosotros" className="info-section">
 
@@ -268,9 +267,6 @@ function App() {
 
         </section>
 
-
-        {}
-
         <section id="beneficios" className="benefits-section">
 
           <div className="section-header">
@@ -329,8 +325,8 @@ function App() {
               
 
               <div>
-                <h2>CacaoTrace</h2>
-                <span>Huila</span>
+                <h2>Mercacao</h2>
+                <span>Colombia</span>
               </div>
             </div>
 
@@ -364,11 +360,11 @@ function App() {
         <div className="footer-bottom">
 
           <span>
-            © 2026 CacaoTrace Huila
+            © 2026 Mercacao Colombia
           </span>
 
           <span>
-            Proyecto académico · DEVURITY
+            Proyecto académico · HACKATON
           </span>
 
         </div>
