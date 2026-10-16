@@ -1,9 +1,10 @@
 "use client";
 
 import "./App.css";
-import cosecha from "./assets/cosecha.jpeg";
+
 
 function App() {
+  const cosecha = "https://brayanrk.evogb.org/BrayanRK/gVarp.jpg";
   return (
     <div className="app">
       <header className="navbar">
