@@ -1,5 +1,6 @@
 export const PERMISOS = {
   recibir_lote: ['operador', 'admin'],
+  ver_lotes: ['operador', 'admin'],
   registrar_etapa: ['operador', 'admin'],
   ver_costos: ['admin'],
   cambiar_estado: ['admin'],

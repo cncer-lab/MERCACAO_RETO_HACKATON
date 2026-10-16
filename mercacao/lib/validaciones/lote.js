@@ -20,3 +20,17 @@ export const esquemaLote = z.object({
     .positive({ error: 'La cantidad debe ser mayor que cero' }),
   unidad: texto('La unidad'),
 });
+
+export const esquemaFiltrosLote = z.object({
+  origen: z
+    .string()
+    .trim()
+    .max(60, { error: 'El origen es muy largo (máximo 60)' })
+    .optional()
+    .transform((v) => (v ? v : undefined)),
+  estado: z
+    .enum(['pendiente', 'liberado', 'bloqueado'], {
+      error: 'El estado debe ser pendiente, liberado o bloqueado',
+    })
+    .optional(),
+});
